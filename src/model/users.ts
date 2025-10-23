@@ -9,7 +9,7 @@ const users: User[] = [
 ]
 
 export const addUser = (user: User): boolean => {
-    if (users.findIndex(item => item.id === user.id) !== -1) //почему по индексу??????? откуда -1??
+    if (users.findIndex(item => item.id === user.id) !== -1)
         return false;
     users.push(user);
     return true;
@@ -39,6 +39,3 @@ export const updateUser = (newName: string, id: number): boolean => {
         return true;
     }
 }
-
-
-///////////   надо доделать эндпоинты в апп - апдейт и удаление - что там юзаем гет или пост???

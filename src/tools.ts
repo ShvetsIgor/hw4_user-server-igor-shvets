@@ -5,7 +5,7 @@ export async function parsBody<T = any>(req: InstanceType<typeof IncomingMessage
     return new Promise((resolve, reject) => {
         let body = "";
         req.on('data', (chunk) => {
-            body += chunk.toString();   //собтие будет происходить столько раз, на сколько поделено бади. Как бы делим бади на куски
+            body += chunk.toString();   //Событие будет происходить столько раз, на сколько поделено бади. Как бы делим бади на куски
         });
         req.on('end', () => {
             try {
